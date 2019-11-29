@@ -8,7 +8,7 @@ let app = express()
    port = 3000
  }
  app.use(express.static('public'))
- let connectionString ='mongodb+srv://ezee:Maxxy@cluster0-t75id.mongodb.net/toDoApp?retryWrites=true&w=majority'
+ let connectionString ='mongodb+srv://USERNAME:PASSWORD@cluster0-t75id.mongodb.net/toDoApp?retryWrites=true&w=majority'
  mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, client) {
   db = client.db()
   app.listen(port)
